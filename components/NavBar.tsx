@@ -2,6 +2,7 @@ import { WalletMinimal } from "lucide-react";
 import React from "react";
 import ModeToggle from "../components/ui/mode-toggle";
 
+
 const NavBar = () => {
     return (
         <nav className="flex justify-between items-center py-4">
