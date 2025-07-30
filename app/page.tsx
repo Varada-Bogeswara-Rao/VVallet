@@ -1,16 +1,17 @@
+import GetBalance from "@/components/GetBalance";
+import NavBar from "@/components/NavBar";
+import  ModeToggle  from "@/components/ui/mode-toggle";
+import WalletGenerator from "@/components/WalletGenerator";
+import Image from "next/image";
 
-import WalletGenerator from '@/components/WalletGenerator'
-import NavBar from '@/components/NavBar'
-import React from 'react'
-
-const Home = () => {
+export default function Home() {
   return (
-    <main className="max-w-7xl mx-auto flex flex-col gap-4 p-4 min-h-[92vh]" >
-      <NavBar />
-      <WalletGenerator />
+   <div className="flex flex-col">
+    <NavBar/>
+    <GetBalance />
+   
+    <WalletGenerator />
 
-    </main>
+   </div>
   )
 }
-
-export default Home
