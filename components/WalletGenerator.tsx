@@ -396,7 +396,7 @@ const WalletGenerator = () => {
                                     size="lg"
                                     className="mt-4"
                                     disabled={!acknowledgedLoss || !acknowledgedWritten}
-                                    onClick={() => handleGenerateWallet()}
+                                    onClick={() => handleAddWallet()}
                                 >
                                     Generate Keys
                                 </Button>
@@ -431,11 +431,11 @@ const WalletGenerator = () => {
                                     {gridView ? <Grid2X2 /> : <List />} {/* Icon changes based on view */}
                                 </Button>
                             )}
-                            <Button onClick={() => handleAddWallet()}>Add Wallet</Button> {/* Add another wallet from same mnemonic */}
+                            <Button className=" text-lg  border  border-black  dark:border-white px-4 py-2 rounded transition-colors duration-300" onClick={() => handleAddWallet()}>Add Wallet</Button> {/* Add another wallet from same mnemonic */}
                             {/* Clear All Wallets Button with AlertDialog Confirmation */}
                             <AlertDialog>
                                 <AlertDialogTrigger asChild>
-                                    <Button variant="destructive" className="self-end bg-destructive text-destructive-foreground hover:bg-destructive/90">
+                                    <Button variant="destructive" className="self-end bg-red-700 hover:bg-red-900">
                                         Clear Wallets
                                     </Button>
                                 </AlertDialogTrigger>
@@ -488,7 +488,7 @@ const WalletGenerator = () => {
                                                 variant="ghost"
                                                 className="flex gap-2 items-center"
                                             >
-                                                <Trash className="size-4 text-destructive" /> {/* Trash icon */}
+                                                <Trash className="size-4 text-red-700 " />  {/* Trash icon */}
                                             </Button>
                                         </AlertDialogTrigger>
                                         <AlertDialogContent>
