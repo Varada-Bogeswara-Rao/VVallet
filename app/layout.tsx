@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
-import { ThemeProvider } from "../components/theme-provider";
+import { ThemeProvider } from "./components/theme-provider";
 import { Manrope } from "next/font/google";
 import { Toaster } from "sonner";
 const manrope = Manrope({ subsets: ["latin"] });
@@ -31,15 +31,15 @@ export default function RootLayout({
       <body
         className={`${manrope.className}`}
       >
-         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Toaster />
-            {children}
-          </ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Toaster />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
