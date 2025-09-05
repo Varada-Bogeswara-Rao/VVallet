@@ -121,7 +121,7 @@ const page = () => {
                         onChange={(e) => setAddress(e.target.value)}
                         className="text-center w-3/4"
                     />
-                    <Button onClick={handleFetchBalance} disabled={isLoading} className="w-1/2">
+                    <Button  type="button" onClick={handleFetchBalance} disabled={isLoading} className="w-1/2">
                         {isLoading ? 'Checking...' : 'Check Balance'}
                     </Button>
 

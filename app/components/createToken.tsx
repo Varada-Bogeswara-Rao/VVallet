@@ -61,16 +61,16 @@ const createToken = () => {
             const mint = generateSigner(umi);
             const decimals = 9;
 
-                 await createFungible(umi, {
+            await createFungible(umi, {
                 mint,
                 name: tokenName,
                 symbol: tokenSymbol,
                 uri: metadataUri,
-                
-                sellerFeeBasisPoints: percentAmount(0), 
+
+                sellerFeeBasisPoints: percentAmount(0),
                 decimals: some(decimals),
             }).sendAndConfirm(umi, { send: { skipPreflight: true } });
-            
+
             const amountToMint = BigInt(supply * (10 ** decimals));
             await mintV1(umi, {
                 mint: mint.publicKey,
@@ -82,7 +82,7 @@ const createToken = () => {
 
             return `https://explorer.solana.com/address/${mint.publicKey.toString()}?cluster=devnet`;
         };
-            toast.promise(promise(), {
+        toast.promise(promise(), {
             loading: 'Creating and minting token...',
             success: (link) => (
                 <div className="flex flex-col">
@@ -105,7 +105,7 @@ const createToken = () => {
             </CardHeader>
             <CardContent className="flex flex-col items-center justify-center space-y-2 p-6">
                 {/* <WalletMultiButton style={{ backgroundColor: '#9945FF', width: '100%', borderRadius: '0.5rem' }} /> */}
-                
+
                 {wallet.publicKey && (
                     <div className="w-full space-y-4 pt-4 text-center">
                         <Input value={tokenName} onChange={(e) => setTokenName(e.target.value)} placeholder="Token Name (e.g. My Token)" disabled={isLoading} />
@@ -125,4 +125,3 @@ const createToken = () => {
 
 export default createToken;
 
-    
