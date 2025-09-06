@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 import CreateToken from '../components/CreateToken';
-// import MintMore from '@/components/MintMore';
+import MintMore from '../components/MintMore';
 // import SendToken from '@/components/SendToken';
 
 import { ToggleGroup,ToggleGroupItem } from '@/components/ui/toggle-group';
@@ -42,7 +42,7 @@ const Page = () => {
 
           <div className='flex flex-col gap-2 py-4 px-4 sm:px-10 md:px-20'>
             <h1 className='text-4xl tracking-tighter font-[900]'>Token Management</h1>
-            <p className='text-primary/80 font-semibold'>Via Vaultory On Solana Blockchain</p>
+            <p className='text-primary/80 font-semibold'>Via VVallet On Solana Blockchain</p>
           </div>
           <Button
               onClick={() => setNetwork(network === 'devnet' ? 'mainnet' : 'devnet')}
@@ -88,8 +88,8 @@ const Page = () => {
                 
             
                     {activeComponent === 'create' && <CreateToken/>}
-                    {/* {activeComponent === 'mint' && <MintMore />}
-                    {activeComponent === 'send' && <SendToken />}
+                    {activeComponent === 'mint' && <MintMore />}
+                    {/* {activeComponent === 'send' && <SendToken />}
                     {activeComponent === 'swap' && <SwapTokenClient />} */}
                     {/* {activeComponent === 'swap' && <SwapToken />} */}
 
