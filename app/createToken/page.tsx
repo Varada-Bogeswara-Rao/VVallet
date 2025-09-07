@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 import CreateToken from '../components/CreateToken';
 import MintMore from '../components/MintMore';
-// import SendToken from '@/components/SendToken';
+import SendToken from '../components/SendToken';
 
 import { ToggleGroup,ToggleGroupItem } from '@/components/ui/toggle-group';
 
@@ -89,8 +89,8 @@ const Page = () => {
             
                     {activeComponent === 'create' && <CreateToken/>}
                     {activeComponent === 'mint' && <MintMore />}
-                    {/* {activeComponent === 'send' && <SendToken />}
-                    {activeComponent === 'swap' && <SwapTokenClient />} */}
+                    {activeComponent === 'send' && <SendToken />}
+                    {/* {activeComponent === 'swap' && <SwapTokenClient />} */}
                     {/* {activeComponent === 'swap' && <SwapToken />} */}
 
 
